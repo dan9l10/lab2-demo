@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"lab2.games"}],"uuid":"8ff458fec01d41d78da76753f3c2ce77"}
