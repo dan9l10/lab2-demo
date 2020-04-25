@@ -18,6 +18,7 @@ include  'connectMongo.php';
         }
         ?>
         </select>
+        <button onclick="showOldDataLeague()">Show OLD Data</button>
         <br>
         <label>Select Team</label>
         <select id="teams" onchange="getPlayers()">
@@ -30,10 +31,9 @@ include  'connectMongo.php';
         </select>
         <label>Show matches</label>
         <input type="checkbox" onclick="testCheck()" id="showMatches">
+        <button onclick="showOldDataPlayers()">Show OLD Data</button>
         <br>
-        <button onclick="showOldData()">Show OLD Data</button>
-        <br>
-        <br>
+        
         
         
         <div id="data_output_container">

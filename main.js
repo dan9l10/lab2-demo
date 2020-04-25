@@ -78,21 +78,21 @@ function testCheck(){
     }
 }
 
-function showOldData(){
+function showOldDataPlayers(){
+    
     let team = document.getElementById("teams").value;
-    let valueTeams = document.getElementById("teams").value;
-    let valueLeagues = document.getElementById("leagues").value;
     let tableForOldData=document.getElementById("old_data");
-    let list_old=document.getElementById("list_players_old");
     document.getElementById("label_old_data").innerHTML='OLD DATA:'; 
-    if(localStorage[valueLeagues]!==undefined  ){
-        tableForOldData.innerHTML=localStorage[valueLeagues];
-    }else if(localStorage[team]!==undefined){
+    if(localStorage[team]!==undefined){
         tableForOldData.innerHTML=localStorage[team];
-    }else 
-    if(localStorage[valueTeams]!==undefined){
-        list_old.innerHTML=localStorage[valueTeams];
     }
     
 }
-
+function showOldDataLeague(){
+    document.getElementById("label_old_data").innerHTML='OLD DATA:'; 
+    let tableForOldData=document.getElementById("old_data");
+    let valueLeagues = document.getElementById("leagues").value;
+    if(localStorage[valueLeagues]!==undefined  ){
+        tableForOldData.innerHTML=localStorage[valueLeagues];
+    }
+}
