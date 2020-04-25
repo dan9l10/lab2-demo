@@ -9,6 +9,7 @@ include  'connectMongo.php';
         <script src="main.js"></script>
     </head>
     <body>
+        <label>Select League</label>
         <select id="leagues" onchange="getLeagues()" >
         <?php
         $leagues=$collection->distinct('league');
@@ -17,6 +18,8 @@ include  'connectMongo.php';
         }
         ?>
         </select>
+        <br>
+        <label>Select Team</label>
         <select id="teams" onchange="getPlayers()">
         <?php
         $teams=$collectionSec->distinct('name');
@@ -25,12 +28,34 @@ include  'connectMongo.php';
         }
         ?>
         </select>
+        <label>Show matches</label>
+        <input type="checkbox" onclick="testCheck()" id="showMatches">
+        <br>
+        <button onclick="showOldData()">Show OLD Data</button>
+        <br>
+        <br>
         
+        
+        <div id="data_output_container">
         <table id="table_out" border="1">
             
         </table>
         <ul id="list_players">
             
         </ul>
+         <table id="table_matches" border="1">
+            
+         </table>
+        </div>
+        <br><br>
+        <div id="old_data_out">
+            <h1 id="label_old_data"></h1>
+            <table id="old_data" border="1">
+            
+            </table>
+            <ol id="list_players_old">
+            </ol>
+        </div>
+        
     </body>
 </html>
